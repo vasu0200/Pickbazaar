@@ -1,0 +1,387 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+}
+#main-container{
+    height: 100vh;
+    background-image: url(https://shop-pickbazar-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F904%2Fgrocery.png&w=3840&q=75);
+    background-size: 100%;
+}
+
+#navbar-container{
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+#logo{
+    height: 25px;
+    width: 160px;
+}
+#grocery-dropdown{
+   font-size: large;
+   padding: 8px;
+   border-radius: 5px;
+   border: 1px solid #009F7F;
+   color: #009F7F;
+   cursor: pointer;
+}
+
+#dropdown-list{
+    display: none;
+    gap: 10px;
+    position: absolute;
+    box-shadow: 1px 1px 5px grey;
+    width: 130px;
+    background-color: whitesmoke;
+    padding-left: 20px;
+}
+
+li{
+    list-style: none ;
+    
+}
+
+#searchbar{
+   border: 1px solid rgb(169, 168, 168);
+   padding: 6px;
+   border-radius: 5px;
+  
+    
+}
+#option-list{
+    display: flex;
+    gap: 25px;
+    color: gray;
+  
+}
+a{
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color:#009F7F;
+}
+#nav-buttons{
+ display: flex;
+ gap: 20px;
+   
+}
+#seller,#join{
+    font-size: 15px;
+    color: white;
+    background-color: #009F7F;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    padding:8px ;
+}
+
+
+/* title content */
+
+.title{
+    font-size: 50px;
+}
+.sub-title{
+    font-size: 20px;
+}
+#title-searchbar{
+    height: 40px;
+    width: 500px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+    background-color:whitesmoke;
+
+}
+#title-button{
+    height: 40px;
+    width: 150px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #009F7F;
+    border: none;
+}
+.title-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+/* carousel */
+
+#carousel-container{
+    height: 260px;
+    width: 100%;
+    overflow-x:hidden;
+    position: relative;
+  padding: 30px;
+  
+    
+}
+#carousel-items{
+  
+   display: flex;
+   width: 75rem;
+   gap: 20px;
+    
+}
+#img{
+    height: 200px;
+    width: 400px;
+}
+
+#prev,#next{
+    position: absolute;
+    font-size: 20px;
+    opacity: 0.6;
+    height: 35px;
+width: 35px;
+border-radius: 50%;
+border: none;
+
+}
+#prev{
+
+top: 40%;
+right: 20px;
+}
+#next{
+    top: 40%;
+    left: 20px;
+}
+#next:hover{
+    opacity: 1;
+    display: none;
+  
+}
+#prev:hover{
+    opacity: 1;
+}
+
+#filter-products-container{
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* filter */
+details > summary {
+    padding: 4px;
+    width: 250px;
+    height: 40px;
+
+    border-bottom:1px solid darkgray ;
+    cursor: pointer;
+  }
+  details > div {
+    padding: 4px;
+    width: 250px;
+   padding: 10px;
+   padding-left: 30px;
+    /* border-bottom:1px solid darkgray ; */
+    cursor: pointer;
+    margin: 0;
+  }
+   /* products */
+
+   #products{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 1px 1px 10px rgb(169, 168, 168);
+    gap: 10px;
+    width: 300px;
+   }
+
+   #product-img{
+    height: 250px;
+    width: 250px;
+   }
+   #price{
+    font-size: 20px;
+    font-weight: 500;
+    /* padding-left: 30px; */
+   }
+   #productname{
+    color: rgb(69, 68, 68);
+    padding-left: 30px;
+   }
+   #minus-btn{
+    width: 10%;
+    height: 25px;
+    border: none;
+    background-color: #009F7F;
+ 
+   }
+   #add{
+    width: 100%;
+    height: 25px;
+    border: none;
+    text-align: center;
+    color: white;
+    background-color: #009F7F;
+    cursor: pointer;
+
+   }
+   #pluse-btn{
+    width: 10%;
+    height: 25px;
+    border: none;
+    background-color: #009F7F;
+
+   }
+ #products-container{
+    display: grid;
+    grid-template-columns: 20rem 20rem 18rem;
+    row-gap: 20px;
+    gap: 5px;
+ }
+
+ #cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 90px;
+    width: 100px;
+    background-color: #009F7F;
+    border-radius: 5px;
+    position: fixed;
+    right: 0;
+    top: 50%;
+ }
+#totalprice{
+    background-color: white;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+#cartCanvas{
+    width: 320px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -320px;
+    z-index: 1;
+    padding: 10px;
+    background-color: white;
+}
+#checkout{
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    bottom: 20px;
+    background-color: #009F7F;
+    border: none;
+}
+#close:hover{
+    cursor: pointer;
+    color: red;
+}
+
+/* cart */
+.cart-container{
+    display: grid;
+    grid-template-columns: 6rem 6rem 6rem;
+    gap: 10px;
+   
+}
+
+.cart-items{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid #009F7F; */
+    position: relative;
+    box-shadow: 1px 1px 10px darkgray;
+    padding: 3px;
+}
+.cart-img{
+    height: 60px;
+    width: 60px;
+
+}
+
+.delete{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.fa-solid {
+    color: #009F7F;
+}
+
+@media screen and (min-width:500px) and (max-width:786px) {
+    
+#searchbar{
+    border: 1px solid rgb(169, 168, 168);
+    padding: 6px;
+    border-radius: 5px;
+    display: none;
+   
+     
+ }
+
+ .title{
+    font-size: 40px;
+}
+.sub-title{
+    font-size: 20px;
+}
+#title-searchbar{
+    height: 40px;
+    width: 400px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+    background-color:whitesmoke;
+
+}
+ #carousel-container{
+    height: 240px;
+    width: auto;
+    overflow-x:hidden;
+    position: relative;
+  padding: 10px;
+  
+}
+#img{
+    height: 200px;
+    width: 300px;
+}
+ #products-container{
+    display: grid;
+    grid-template-columns: 15rem 12rem;
+    row-gap: 20px;
+    gap: 5px;
+ }
+ #products{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 1px 1px 10px rgb(169, 168, 168);
+    gap: 10px;
+    width: 200px;
+   }
+ #product-img{
+    height: 180px;
+    width: 180px;
+   }
+}
+
+@media screen and (min-width:240px) and (max-width:500px){
+
+}
